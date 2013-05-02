@@ -1,12 +1,2 @@
-safe:        false
-auto:        true
-server:      false
-server_port: 4000
-url:         http://localhost:4000
-destination: ./_site
-plugins:     ./_plugins
-future:      true
-permalink:   date
 markdown: markdown
-lsi: false
 pygments: true
