@@ -60,7 +60,7 @@ nav ul li img { border:0;}
 	width: 650px;
 	margin-left:30px;}
 
-article { min-height: 200px; font-family:Trebuchet MS, 'Open Sans'; padding-right: 14px;}
+article { min-height: 200px; font-family:Trebuchet MS, 'Open Sans'; padding-right: 14px; margin-bottom:30px;}
 
 article header { display: block; width: 680px;  }
 
@@ -75,7 +75,7 @@ article header h4 {
 	color: #323232;
 	display: block;
 	font-family: 'Noto Serif';
-	font-size:20pt; }
+	font-size:23pt; }
 
 article header .date {
 	font-size:8pt;
