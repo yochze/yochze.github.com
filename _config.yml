@@ -1,0 +1,19 @@
+safe:        false
+auto:        true
+server:      false
+server_port: 4000
+url:         http://localhost:4000
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+future:      true
+permalink:   date
+markdown:    maruku
+arkdown: rdiscount
+pygments: true
+auto: true
+safe: true
+source: <your pages repository>
+destination: <the build dir>
+lsi: false
+pygments: true
