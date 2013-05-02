@@ -31,7 +31,7 @@ hgroup .logo {
 	background-repeat: no-repeat; }
 
 hgroup h2 { font-family: Trebuchet MS; 
-			font-size: 23pt;
+			font-size: 14pt;
 			letter-spacing: 0.04em;
 			color: #323232;
 			margin-top:10px;
@@ -44,7 +44,7 @@ hgroup h3 { font-family: 'Open Sans', sans-serif;
 			margin-top:10px;
 			text-align: center;}
 
-
+hgroup #coffee { font-family: 'Open Sans', sans-serif; font-size: 8pt; color: #898989; float:right; margin-top:-10px; display: none;}
 hgroup .highlight { color: #56a5c6; font-family: 'Open Sans'; font-size:10pt; font-weight: 300; display: inline;} 
 
 nav ul { list-style-type: none; margin-left:auto; margin-right:auto;}
