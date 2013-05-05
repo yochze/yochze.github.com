@@ -4,11 +4,11 @@ title: nohup utility to keep your process going
 comments: true
 ---
 
-As part of my job, I had this task that involved handling huge TSV datasets (of 1b records). My job was to parse all of the datasets and form a new combined one. 
+As part of my job, I had this task that involved handling huge TSV datasets (of 1b records). My specific task was to parse all of the datasets and form a new combined one. 
 
-Despite the fact it will take days to be finally completed, this parsing task sound easy to handle. However, the main difficulty I was facing - was that I had to run the process on another server through my own computer with an internet line that was occasionally interrupted.
+Despite the fact thar it will take days until completed, this parsing task sound easy to handle. However, the main difficulty I was facing - was that I had to run the process on another server through my own computer with an internet line that was occasionally interrupted.
 
-So after a few failed attempts of running this through my local machine, I started searching for a solution that will allow me to run a script on a remote unix server without having to stay connected (to server) through the entire process.
+So after a few failed attempts of running this through my local machine, I started searching for a solution that will allow me to run a script on a remote unix server without having to stay connected (to server) throughout the entire process.
 
 # And there was nohup
 
@@ -20,3 +20,4 @@ This simple command saved my computer from working days and nights continuously.
 
 Besides running the script without interruptions, it also prints the output of the file into _$HOME/nohup.out_. This can be very useful handling errors or even listening the process' progress with _tailing_ the log.
 
+	
