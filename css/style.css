@@ -26,8 +26,8 @@ hgroup .logo {
 	border: 5px solid white;
 	-moz-border-radius: 150px;
 	background-position: center;
-	background-image: url('/images/logo.png');
-	background-size: 180%; 
+	background-image: url('/images/me.png');
+	/*background-size:%; */
 	background-repeat: no-repeat; }
 
 hgroup h2 { font-family: Trebuchet MS; 
@@ -89,6 +89,8 @@ article header .date {
 	padding-left:14;
 	margin-bottom: 40px;
 }
+
+article h1 { font-size: 14pt; font-weight: lighter; padding-left:14px; color: #56a5c6;}
 
 article	h3 {
 	font-family: 'Open Sans', sans-serif;
