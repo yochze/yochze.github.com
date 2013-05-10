@@ -5,6 +5,19 @@ body {
 
 ::selection { color: #fff; background: #56a5c6;} 
 
+pre { 
+  
+  padding:8px 15px;
+  background: #f8f8f8;  
+  border-radius:5px;
+  border:1px solid #e5e5e5;
+  overflow-x: auto;
+  margin-left: 14px;
+  margin-top:-14px;
+  margin-bottom:23px;
+  width: 90%;
+  }
+
 #wrapper { width: 960px; height: auto; margin-left: auto; margin-right: auto; }
 
 nav {

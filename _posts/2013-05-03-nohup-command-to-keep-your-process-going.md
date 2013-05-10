@@ -16,8 +16,8 @@ nohup is a unix utility that enables you to run a command and keep it running ev
 
     $ nohup ./parser.sh &
 
-This simple command saved my computer from working days and nights continuously. This utility, _"no hang up"_, runs a command while staying immune to hangup signals such user logging out etc. 
+This simple command saved my computer from working days and nights continuously. This utility, `"no hang up"`, runs a command while staying immune to hangup signals such user logging out etc. 
 
-Besides running the script without interruptions, it also prints the output of the file into _$HOME/nohup.out_. This can be very useful handling errors or even listening the process' progress with _tailing_ the log.
+Besides running the script without interruptions, it also prints the output of the file into `$HOME/nohup.out`. This can be very useful handling errors or even listening the process' progress with `tailing` the log.
 
 	
