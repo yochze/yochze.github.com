@@ -14,7 +14,7 @@ So after a few failed attempts of running this through my local machine, I start
 
 nohup is a unix utility that enables you to run a command and keep it running even though session is disconnected or user has logged out.
 
-> $ nohup ./parser.sh &
+    $ nohup ./parser.sh &
 
 This simple command saved my computer from working days and nights continuously. This utility, _"no hang up"_, runs a command while staying immune to hangup signals such user logging out etc. 
 
