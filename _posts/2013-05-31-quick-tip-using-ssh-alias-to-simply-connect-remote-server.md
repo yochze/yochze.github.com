@@ -19,7 +19,7 @@ I have found that adding my servers to a `config` file in the `.ssh` directory m
 	$ touch ~/.ssh/config # 
 	$ vim ~/.ssh/config
 
-Inside the config file, I added the info mentioned below. The info represents a single connection to a remote server. It requires an alias, the server address, the username and the pem.
+Inside the config file, I added the info mentioned below. The info represents a single connection to a remote server. It requires an alias, the server address, the username and the location of the ssl certificate.
 
 	Host: webbing
 	HostName: ec2-user@ec2-123-123-123.amazonaws.com 
