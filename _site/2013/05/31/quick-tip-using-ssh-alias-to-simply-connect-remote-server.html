@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>yochze | Hello World</title>
+	<title>yochze | Using SSH alias to simplify connection to remote servers</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css"
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
@@ -32,19 +32,35 @@
 <div id="right">
 	<article>
 		<header>
-			<h4><a href="/2013/02/01/Hello-World.html">Hello World</a></h4>
+			<h4><a href="/2013/05/31/quick-tip-using-ssh-alias-to-simply-connect-remote-server.html">Using SSH alias to simplify connection to remote servers</a></h4>
 			<div class="date">
-				01 February 2013
+				31 May 2013
 			</div>
 		</header>
 		<p>
-			<p>Commiting and engaging a personal blog platform was something I always wanted to do. I surely hope that I will have interesting stuff to write about and this platform will be useful and enrichful for people stumbling it.</p>
+			<p>Connecting remote servers using SSH is a fundamental part of my daily tasks. Whether it&#8217;s connecting to a EC2 instance or managing the VPS of a certain app, it is all taken care of through SSH protocol.</p>
 
-<p>In the near future I will write about stuff I care about such as: Programming, Design, Open Source.</p>
+<p>The SSH protocol allows your to login and connect to a remote server and execute commands on that server.</p>
 
-<p>Thanks</p>
+<p>Normally, I have used the following to connect a remote server</p>
 
-<p>Y</p>
+<pre><code>$ ssh -i ~/cert.pem ec2-user@ec2-123-123-123.amazonaws.com</code></pre>
+
+<p>This is terribly long, and in case you have several servers to manage - it is also very confusing. So I was looking a way to make it easier and simpler.</p>
+
+<pre><code>$ touch ~/.ssh/config
+$ vim ~/.ssh/config</code></pre>
+
+<p>And then paste some code to make it handle aliases</p>
+
+<pre><code>Host: webbing # alias name
+HostName: ec2-user@ec2-123-123-123.amazonaws.com 
+User: ec2-user
+IdentifyFile: ~/cert.pem</code></pre>
+
+<p>Now, the <code>connecting</code> command has shortned to</p>
+
+<pre><code>$ ssh webbing</code></pre>
 		</p>
 	</article>
 

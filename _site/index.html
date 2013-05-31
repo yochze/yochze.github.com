@@ -25,12 +25,46 @@
 			<li  onmouseover="document.getElementById('coffee').style.display = 'block';" onmouseout="document.getElementById('coffee').style.display = 'none';" class="last"><a href="#coffee"><img src="/images/coffee.png"></a></li>
 		</ul>
 		<div id="coffee">
-			I just really like coffee
+			I really like coffee
 		</div>
 	</hgroup>
 </nav>
 	<div id="right">
 		
+<article>
+	<header>
+		<h4><a href="/2013/05/31/quick-tip-using-ssh-alias-to-simply-connect-remote-server.html">Using SSH alias to simplify connection to remote servers</a></h4>
+		<div class="date">
+			31 May 2013 
+		</div>
+	</header>
+	<p>
+		<p>Connecting remote servers using SSH is a fundamental part of my daily tasks. Whether it&#8217;s connecting to a EC2 instance or managing the VPS of a certain app, it is all taken care of through SSH protocol.</p>
+
+<p>The SSH protocol allows your to login and connect to a remote server and execute commands on that server.</p>
+
+<p>Normally, I have used the following to connect a remote server</p>
+
+<pre><code>$ ssh -i ~/cert.pem ec2-user@ec2-123-123-123.amazonaws.com</code></pre>
+
+<p>This is terribly long, and in case you have several servers to manage - it is also very confusing. So I was looking a way to make it easier and simpler.</p>
+
+<pre><code>$ touch ~/.ssh/config
+$ vim ~/.ssh/config</code></pre>
+
+<p>And then paste some code to make it handle aliases</p>
+
+<pre><code>Host: webbing # alias name
+HostName: ec2-user@ec2-123-123-123.amazonaws.com 
+User: ec2-user
+IdentifyFile: ~/cert.pem</code></pre>
+
+<p>Now, the <code>connecting</code> command has shortned to</p>
+
+<pre><code>$ ssh webbing</code></pre>
+	</p>
+</article>
+
 <article>
 	<header>
 		<h4><a href="/2013/05/03/nohup-command-to-keep-your-process-going.html">nohup utility to keep your process going</a></h4>
@@ -39,13 +73,13 @@
 		</div>
 	</header>
 	<p>
-		<p>As part of my job, I had this task that involved handling huge TSV datasets (of 1b records). My specific task was to parse all of the datasets and form a new combined one.</p>
+		<p>As part of my job, I had a task that involved handling huge TSV datasets (of 1b records). My specific task was to parse all of the datasets and form a new combined one.</p>
 
-<p>Despite the fact thar it will take days until completed, this parsing task sound easy to handle. However, the main difficulty I was facing - was that I had to run the process on another server through my own computer with an internet line that was occasionally interrupted.</p>
+<p>Despite the fact that it will take days until completed, this parsing task sound easy to handle. However, the main difficulty I was facing - was that I had to run the process on another server through my own computer with an internet line that was occasionally interrupted.</p>
 
 <p>So after a few failed attempts of running this through my local machine, I started searching for a solution that will allow me to run a script on a remote unix server without having to stay connected (to server) throughout the entire process.</p>
 
-<h1 id='and_there_was_nohup'>And there was nohup</h1>
+<h1 id='and_then_there_was_nohup'>And then there was nohup</h1>
 
 <p>nohup is a unix utility that enables you to run a command and keep it running even though session is disconnected or user has logged out.</p>
 
@@ -94,5 +128,14 @@
 	</div>
 
 </div>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-40865809-1', 'y14.io');
+	  ga('send', 'pageview');
+	</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quick Tip: Using SSH alias to simplify connection to remote servers
+title: Using SSH alias to simplify connection to remote servers
 comments: true
 ---
 
