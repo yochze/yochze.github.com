@@ -33,13 +33,27 @@
 		
 <article>
 	<header>
-		<h4><a href="/2013/05/31/quick-tip-using-ssh-alias-to-simply-connect-remote-server.html">Using SSH alias to simplify connection to remote servers</a></h4>
+		<h4><a href="/2013/08/09/good-writer-should-not-pay-for-coffee.html">A good writer should not pay for his own coffee</a></h4>
+		<div class="date">
+			09 August 2013 
+		</div>
+	</header>
+	<p>
+		<p>This idea struck me a few weeks ago. Good writers, bloggers, coders and other contributers should not pay for their own coffee.</p>
+
+<p>Here&#8217;s a slidedeck exposing a hint of the idea.</p>
+	</p>
+</article>
+
+<article>
+	<header>
+		<h4><a href="/2013/05/31/quick-tip-using-SSH-alias-to-simplify-connections-to-remote-servers.html">Using SSH alias to simplify connections to remote servers</a></h4>
 		<div class="date">
 			31 May 2013 
 		</div>
 	</header>
 	<p>
-		<p>Connecting remote servers using SSH is a fundamental part of my daily tasks. Whether it&#8217;s connecting to a EC2 instance or managing the VPS of a certain app, it is all taken care of through SSH protocol.</p>
+		<p>Connecting remote servers using SSH is a fundamental part of my daily tasks. Whether it&#8217;s connecting to a EC2 instance or managing the VPS of a certain app, it is all taken care of through the SSH protocol.</p>
 
 <p>The SSH protocol allows your to login and connect to a remote server and execute commands on that server.</p>
 
@@ -49,12 +63,14 @@
 
 <p>This is terribly long, and in case you have several servers to manage - it is also very confusing. So I was looking a way to make it easier and simpler.</p>
 
-<pre><code>$ touch ~/.ssh/config
+<p>I have found that adding my servers to a <code>config</code> file in the <code>.ssh</code> directory might do the trick. Here is what I have done:</p>
+
+<pre><code>$ touch ~/.ssh/config # 
 $ vim ~/.ssh/config</code></pre>
 
-<p>And then paste some code to make it handle aliases</p>
+<p>Inside the config file, I added the info mentioned below. The info represents a single connection to a remote server. It requires an alias, the server address, the username and the location of the ssl certificate.</p>
 
-<pre><code>Host: webbing # alias name
+<pre><code>Host: webbing
 HostName: ec2-user@ec2-123-123-123.amazonaws.com 
 User: ec2-user
 IdentifyFile: ~/cert.pem</code></pre>
